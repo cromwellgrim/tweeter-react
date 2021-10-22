@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import Navigation from './components/Navigation';
 import Profile from './components/Profile';
 import TweetForm from './components/TweetForm';
