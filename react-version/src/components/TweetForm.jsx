@@ -2,12 +2,18 @@ import React from 'react'
 
 function TweetForm() {
 
+  const placeHolder = "What are you humming about?";
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log('oof');
+  }
+
   return (
-    <section class="newtweet">
-    <form method="post" action="/tweets" class="newtweet__form">
-      <textarea class="form__textarea" name="text" placeholder="What are you humming about?"></textarea>
-      <input type="submit" value="Tweet" class="form__input" />
-      <span class="form__counter">140</span>
+    <section className="newtweet">
+    <form method="post" action="/tweets" className="newtweet__form" onSubmit={handleSubmit}>
+      <textarea className="form__textarea" name="text" placeholder={placeHolder}></textarea>
+      <input type="submit" value="Tweet" className="form__input" />
+      <span className="form__counter">140</span>
     </form>
   </section>
   );
